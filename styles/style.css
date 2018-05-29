@@ -2,6 +2,15 @@ body {
   background: skyblue;
 }
 
+h1 {
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  cursor: pointer;
+}
+
 .jumbotron {
   margin: auto;
   text-align: center;
@@ -14,4 +23,31 @@ body {
   display: block;
   margin: 100px;
   font-size: 90px;
+}
+
+.well {
+  box-shadow: 2px 2px 2px 2px black;
+  text-align: center;
+  font-size: 40px;
+}
+
+.blue {
+  background: skyblue;
+  box-shadow: none;
+  border: none;
+  padding: 0;
+}
+
+.row {
+  margin: 40px 0px;
+}
+
+#score {
+  font-size: 40px;
+}
+
+.decision {
+  margin-top: 50px;
+  box-shadow: none;
+  background: rgb(212, 113, 113) !important;
 }

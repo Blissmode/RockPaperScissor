@@ -7,18 +7,19 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="styles/style.css">
         <script src="script.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
 
-    <body>
-      <div class="container">
-        <div class="jumbotron">
-          <h3>Get ready to play the most fierce game in history!</h3>
-          <h1 id="gameName"></h1>
-          <script>
-            animater();
-          </script>
-          <p id="nextPage"></p>
+    <body  onKeyPress="enterpressalert(event, this)">
+        <div class="container">
+          <div class="jumbotron">
+            <h3>Get ready to play the most fierce game in history!</h3>
+            <h1 id="gameName"></h1>
+            <script>
+              animater();
+            </script>
+            <p id="nextPage"></p>
+          </div>
         </div>
-      </div>
-    </body>
+      </body>
 </html>
