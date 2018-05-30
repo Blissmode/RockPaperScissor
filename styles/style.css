@@ -60,3 +60,22 @@ img {
   box-shadow: none;
   background: rgb(212, 113, 113) !important;
 }
+
+@media screen and (max-width: 600px) {
+  .row .col-xs-5 h1 {
+    font-size: 30px;
+  }
+
+  #score {
+    font-size: 15px;
+  }
+
+  .well {
+    font-size: 20px;
+  }
+
+  #result img {
+    width: 45px !important;
+    height: 45px;
+  }
+}
