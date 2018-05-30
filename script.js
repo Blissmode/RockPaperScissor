@@ -12,6 +12,12 @@ function enterpressalert(e, body){
     }
     
 
+/*/////////////////////////////////////////////////////////////////
+
+FUNCTIONS RELATED TO HOME PAGE
+
+/////////////////////////////////////////////////////////////////*/
+
 function animater()
 {
     timeout=setInterval(paper, 1000);
@@ -47,6 +53,14 @@ function scissor()
     timeout=setInterval(rock, 1000);
 }
 
+
+/*/////////////////////////////////////////////////////////////////
+
+FUNCTIONS RELATED TO GAME PAGE
+
+/////////////////////////////////////////////////////////////////*/
+
+
 function setText(state)
 {
     var selector=Math.floor(Math.random()*3);
@@ -60,6 +74,7 @@ function setText(state)
         ]
 
         resultText=store[selector];
+        document.getElementById("decision").style.background="lawngreen";
     }
     else if(state==0)  //lossing text
     {
@@ -70,6 +85,8 @@ function setText(state)
         ]
 
         resultText=store[selector];
+        document.getElementById("decision").style.background="rgb(212, 113, 113)";
+
     }
     else
     {
@@ -80,6 +97,8 @@ function setText(state)
         ]
 
         resultText=store[selector];
+        document.getElementById("decision").style.background="lightgrey";
+
     }
 }
 
@@ -163,4 +182,27 @@ function move(playerOption)
     console.log(picPlayer+ "vs" + picComp);
 
     document.getElementById("score").innerHTML=pScore+" - "+cScore;
+
+    if(pScore>9)
+    {
+        $(".container").fadeOut(3000,gameResult(1));
+    }
+    else if(cScore>9)
+    {
+        $(".container").fadeOut(3000,gameResult(0));
+    }
+}
+
+function gameResult(result) {
+    $("#resultEnd").fadeIn(2000);
+    if(result)
+    {
+        $("#winloss").html("<blockquote>\“Winning isn’t everything, it’s the only thing.\”<br>-random guy</blockquote>")
+        $("#continue").prepend("Play again!<br>");
+    }
+    else
+    {
+        $("#winloss").html("<blockquote>\“When you lose, you learn..\”<br>-random guy</blockquote>")
+        $("#continue").prepend("Show the computer that you can beat it!<br>");
+    }
 }

@@ -24,6 +24,9 @@ img {
   background: skyblue;
 }
 
+.container {
+  width: 100%;
+}
 #buttonNav {
   display: none;
 }
@@ -55,12 +58,19 @@ img {
   font-size: 40px;
 }
 
-.decision {
+#decision {
   margin-top: 50px;
   box-shadow: none;
-  background: rgb(212, 113, 113) !important;
+  background-color: rgb(212, 113, 113);
 }
 
+#resultEnd {
+  display: none;
+}
+
+blockquote {
+  font-size: 40px;
+}
 @media screen and (max-width: 600px) {
   .row .col-xs-5 h1 {
     font-size: 30px;
