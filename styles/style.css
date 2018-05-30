@@ -6,6 +6,13 @@ h1 {
   text-align: center;
 }
 
+p {
+  margin: auto;
+}
+
+input {
+  margin: auto;
+}
 img {
   width: 100%;
   cursor: pointer;
@@ -14,9 +21,11 @@ img {
 .jumbotron {
   margin: auto;
   text-align: center;
-  position: absolute;
-  top: 20%;
   background: skyblue;
+}
+
+#buttonNav {
+  display: none;
 }
 
 #gameName {

@@ -1,5 +1,7 @@
 var pScore=0, cScore=0;
 resultText="";
+var buttondisplay=0;
+
 
 function enterpressalert(e, body){
     var code = (e.keyCode ? e.keyCode : e.which);
@@ -12,7 +14,7 @@ function enterpressalert(e, body){
 
 function animater()
 {
-    timeout=setInterval(rock, 1000);
+    timeout=setInterval(paper, 1000);
 }
 
 function rock()
@@ -29,6 +31,11 @@ function paper()
     document.getElementById("gameName").innerHTML="PAPER!";
     clearInterval(timeout);
     timeout=setInterval(scissor, 1000);
+    buttondisplay++;
+    if(buttondisplay>1)
+    {
+        document.getElementById("buttonNav").style.display="block";
+    }    
 }
 
 function scissor()
